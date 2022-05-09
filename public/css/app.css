@@ -12173,13 +12173,14 @@ fieldset:disabled .btn {
   }
 }
 
-.ciao {
-  margin: 5rem;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+  width: 300px;
 }
 
