@@ -7,6 +7,6 @@
     <title>Comics</title>
 </head>
 <body>
-    ciao 
+    <a href="{{ route('comics.index')}}">Clicca qui</a> 
 </body>
 </html>

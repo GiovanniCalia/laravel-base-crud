@@ -14,7 +14,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::paginate(3);
+
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -44,9 +46,18 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    /*public function show(Comic $comic)
     {
-        //
+        return view('comics.show',[
+           'title' => $comic->title,
+           'comic' => $comic,
+        ]);
+    }*/
+
+    public function show($id)
+    {
+        $comic = Comic::findOrFail($id);
+        dd($comic);
     }
 
     /**
@@ -55,7 +66,7 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit($id)
     {
         //
     }
@@ -67,7 +78,7 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -78,7 +89,7 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $comic)
+    public function destroy($id)
     {
         //
     }
