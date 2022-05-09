@@ -12182,5 +12182,18 @@ fieldset:disabled .btn {
 li {
   list-style-type: none;
   width: 300px;
+  margin-top: 2rem;
+}
+
+.box {
+  width: 600px;
+  padding: 1rem;
+  margin: auto;
+  background-color: lightblue;
+  border-radius: 10%;
+}
+
+.main_box {
+  width: 100%;
 }
 
