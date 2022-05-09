@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Comic;
+
 use Illuminate\Http\Request;
+use App\Comic;
 
 class ComicController extends Controller
 {
@@ -16,7 +17,7 @@ class ComicController extends Controller
     {
         $comics = Comic::paginate(3);
 
-        return view('comics.index', compact('comics'));
+        return view('Comics.index', compact('comics'));
     }
 
     /**
@@ -46,19 +47,19 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    /*public function show(Comic $comic)
+    public function show(Comic $comic)
     {
         return view('comics.show',[
            'title' => $comic->title,
            'comic' => $comic,
         ]);
-    }*/
+    }
 
-    public function show($id)
+    /*public function show($id)
     {
         $comic = Comic::findOrFail($id);
         dd($comic);
-    }
+    }*/
 
     /**
      * Show the form for editing the specified resource.
