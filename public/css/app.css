@@ -12179,6 +12179,23 @@ fieldset:disabled .btn {
   box-sizing: border-box;
 }
 
+.background_comic {
+  background-image: url(https://wallpaperaccess.com/full/692818.jpg);
+  background-size: cover;
+}
+
+.pad {
+  padding: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.pad h1,
+.pad .h1,
+.pad a {
+  color: white;
+}
+
 li {
   list-style-type: none;
   width: 300px;

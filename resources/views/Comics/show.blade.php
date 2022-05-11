@@ -4,7 +4,7 @@
 
 @section('main')
 <main class="main_box">
-<div class="text-center box">
+<div class="text-center mt-4 box">
     <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
     <h1>{{ $comic->title }}</h1>
     <p>{{ $comic->description }}</p>
