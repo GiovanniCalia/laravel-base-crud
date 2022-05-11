@@ -3,7 +3,7 @@
 @section('title', 'Comics Home')
 
 <main>
-    <ol class="d-flex flex-wrap justify-content-between">
+    <ol class="d-flex flex-wrap justify-content-between cards_main">
         @foreach ($comics as $comic)
              <li class="text-center">
                  <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">

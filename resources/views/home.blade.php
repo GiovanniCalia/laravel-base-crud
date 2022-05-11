@@ -8,7 +8,6 @@
     <title>Comics homepage</title>
 </head>
 <body>
-
     <div class="container-fluid background_comic">
         <div class="row">
             <div class="col-12 pad">

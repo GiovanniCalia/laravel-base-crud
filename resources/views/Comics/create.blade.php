@@ -37,16 +37,11 @@
                     <label for="type" class="form-label"><h4>Type</h4></label>
                     <input type="text" name="type" class="form-control" id="type">
                   </div>
-                <!--<div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>-->
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
 </div>
-
 @endsection
 
 

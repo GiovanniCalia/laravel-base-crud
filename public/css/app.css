@@ -12179,9 +12179,18 @@ fieldset:disabled .btn {
   box-sizing: border-box;
 }
 
+img {
+  border-radius: 10px;
+}
+
 .background_comic {
   background-image: url(https://wallpaperaccess.com/full/692818.jpg);
   background-size: cover;
+}
+
+.background_comic h1,
+.background_comic .h1 {
+  text-transform: uppercase;
 }
 
 .pad {
@@ -12194,20 +12203,34 @@ fieldset:disabled .btn {
 .pad .h1,
 .pad a {
   color: white;
+  margin-bottom: 1rem;
+}
+
+ol {
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 li {
+  width: 100px;
+  margin: auto;
+}
+
+.cards_main li {
   list-style-type: none;
   width: 300px;
   margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: lightgray;
+  border-radius: 20px;
 }
 
 .box {
-  width: 600px;
+  width: 500px;
   padding: 1rem;
   margin: auto;
   background-color: lightblue;
-  border-radius: 10%;
+  border-radius: 20px;
 }
 
 .main_box {
