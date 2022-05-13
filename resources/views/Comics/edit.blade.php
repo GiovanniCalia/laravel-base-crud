@@ -6,13 +6,23 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
-            <h1 class="text-center">Create your comic</h1>
+            <h1 class="text-center">Edit a comic</h1>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                 </div>
+            @endif
+
             <form method="POST" action="{{ route('comics.update', $comic->id) }}" class="mb-3">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
                   <label for="title" class="form-label"><h4>Title</h4></label>
-                  <input type="text" name="title" class="form-control" id="text" value="{{ $comic->title }}">
+                  <input type="text" name="title" class="form-control" id="text" value="{{ old('title', $comic->title) }}">
                 </div>
                 <div class="mb-3">
                   <label for="description" class="form-label"><h4>Description</h4></label>
@@ -20,27 +30,31 @@
                 </div>
                 <div class="mb-3">
                     <label for="thumb" class="form-label"><h4>Thumb</h4></label>
-                    <input type="text" name="thumb" class="form-control" id="thumb" value="{{ $comic->thumb }}">
+                    <input type="text" name="thumb" class="form-control" id="thumb" value="{{ old('thumb', $comic->thumb) }}">
                   </div>
                   <div class="mb-3">
                     <label for="price" class="form-label"><h4>Price</h4></label>
-                    <input type="text" name="price" class="form-control" id="price" value="{{ $comic->price }}">
+                    <input type="text" name="price" class="form-control" id="price" value="{{ old('price', $comic->price) }}">
                   </div>
                   <div class="mb-3">
                     <label for="series" class="form-label"><h4>Series</h4></label>
-                    <input type="text" name="series" class="form-control" id="series" value="{{ $comic->series }}">
+                    <input type="text" name="series" class="form-control" id="series" value="{{ old('series', $comic->series) }}">
                   </div>
                   <div class="mb-3">
                     <label for="sale_date" class="form-label"><h4>Sale_date</h4></label>
-                    <input type="date" name="sale_date" class="form-control" id="sale_date" value="{{ $comic->sale_date }}">
+                    <input type="date" name="sale_date" class="form-control" id="sale_date" value="{{ old('sale_date', $comic->sale_date) }}">
                   </div>
                   <div class="mb-3">
                     <label for="type" class="form-label"><h4>Type</h4></label>
-                    <input type="text" name="type" class="form-control" id="type" value="{{ $comic->type }}">
+                    <input type="text" name="type" class="form-control" id="type" value="{{ old('type', $comic->type) }}">
                   </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <a href="{{ url()->previous()}}">Back</a>
+            <div class="text-center">
+                <a href="{{ url()->previous()}}">Back</a><br>
+                <a href="{{ route('comics.index') }}">Return to comics list</a><br>
+                <a href="{{ route('home') }}">Return to home</a>
+            </div>
         </div>
     </div>
 </div>

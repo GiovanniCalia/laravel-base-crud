@@ -13,7 +13,7 @@
             <div class="col-12 pad">
                 <h1 class="white">Comics homepage</h1>
                 <a href="{{ route('comics.index')}}">Click here to see the comics list</a><br>
-                <a href="{{ route('comics.create')}}">Click here to create a new comic instead</a>
+                <a href="{{ route('comics.create')}}">Click here to add a new comic</a>
             </div>
         </div>
     </div>

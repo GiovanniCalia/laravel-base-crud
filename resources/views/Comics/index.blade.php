@@ -3,6 +3,10 @@
 @section('title', 'Comics Home')
 
 <main>
+    <div class="text-center">
+        <a href="{{ route('home') }}">Return to homepage</a><br>
+        <a href="{{ route('comics.create') }}">Add a comic</a>
+    </div>
     <ol class="d-flex flex-wrap justify-content-between cards_main">
         @foreach ($comics as $comic)
              <li class="text-center">

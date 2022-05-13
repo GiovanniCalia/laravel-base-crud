@@ -10,12 +10,12 @@ class ComicController extends Controller
 {
     protected $validationData = [
         'title'    => 'required|unique:comics|min:5|max:80',
-        'thumb'    => 'nullable|URL|max:250',
+        'thumb'    => 'nullable|url|max:250',
         'price'    => 'nullable|numeric|max:999.99',
         'series'   => 'max:60',
         'type'     => 'required|max:20',
     ];
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -46,14 +46,9 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($this->validationData) /*[
-            'title'       => 'required|unique:comics|min:5|max:80',
-            'thumb'       => 'nullable|URL|max:250',
-            'price'       => 'nullable|numeric|max:999.99',
-            'series'      => 'max:60',
-            'type'        => 'required|max:20',
-        ])*/;
-
+        $request->validate($this->validationData, [
+            'thumb.url' => 'insert a valid URL'
+        ]);
         $formComic = $request->all();
 
         $save = Comic::create($formComic);
@@ -101,7 +96,11 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $this->validationData = [
-            'title'       => 'required|min:5|max:80',
+            'title'    => 'required|min:5|max:80',
+            'thumb'    => 'nullable|url|max:250',/*
+            'price'    => 'nullable|numeric|max:999.99',
+            'series'   => 'max:60',
+            'type'     => 'required|max:20',*/
         ];
         $request->validate($this->validationData);
         $data = $request->all();
