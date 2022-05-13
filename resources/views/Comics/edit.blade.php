@@ -3,7 +3,7 @@
 @section('title', 'Edit Comics')
 
 @section('main')
-<div class="container">
+<div class="container my-4">
     <div class="row">
         <div class="col-8 offset-2">
             <h1 class="text-center">Edit a comic</h1>
@@ -50,9 +50,9 @@
                   </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <div class="text-center">
-                <a href="{{ url()->previous()}}">Back</a><br>
-                <a href="{{ route('comics.index') }}">Return to comics list</a><br>
+            <div class="text-center links">
+                <a href="{{ url()->previous()}}">Back</a>
+                <a href="{{ route('comics.index') }}">Return to comics list</a>
                 <a href="{{ route('home') }}">Return to home</a>
             </div>
         </div>

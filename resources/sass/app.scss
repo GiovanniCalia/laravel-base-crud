@@ -6,6 +6,18 @@
     box-sizing: border-box;
 }
 
+.links{
+    margin-top: 1rem;
+    
+    a{
+        padding: 0.7rem 1rem;
+        background-color: rgb(14, 109, 253);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+}
+
 img{
     border-radius: 10px;
 }

@@ -11,7 +11,7 @@ class ComicController extends Controller
     protected $validationData = [
         'title'    => 'required|unique:comics|min:5|max:80',
         'thumb'    => 'nullable|url|max:250',
-        'price'    => 'nullable|numeric|max:999.99',
+        'price'    => 'numeric|max:999.99',
         'series'   => 'max:60',
         'type'     => 'required|max:20',
     ];
@@ -97,10 +97,10 @@ class ComicController extends Controller
     {
         $this->validationData = [
             'title'    => 'required|min:5|max:80',
-            'thumb'    => 'nullable|url|max:250',/*
-            'price'    => 'nullable|numeric|max:999.99',
+            'thumb'    => 'nullable|url|max:250',
+            'price'    => 'numeric|max:999.99',
             'series'   => 'max:60',
-            'type'     => 'required|max:20',*/
+            'type'     => 'required|max:20',
         ];
         $request->validate($this->validationData);
         $data = $request->all();

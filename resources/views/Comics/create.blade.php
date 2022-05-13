@@ -60,9 +60,9 @@
                 @enderror
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <div class="text-center">
-              <a href="{{ url()->previous()}}">Back</a><br>
-              <a href="{{ route('comics.index') }}">Return to comics list</a><br>
+            <div class="text-center links my-4">
+              <a href="{{ url()->previous()}}">Back</a>
+              <a href="{{ route('comics.index') }}">Return to comics list</a>
               <a href="{{ route('home') }}">Return to home</a>
             </div>
         </div>
