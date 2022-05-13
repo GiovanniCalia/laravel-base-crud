@@ -12,6 +12,14 @@
             <div>Price: <strong>{{ $comic->price }}</strong></div>
             <div>Sale date: {{ $comic->sale_date }}</div>
             <div>{{ $comic->type }}</div>
+            <a href="{{ route('comics.edit', $comic->id) }}">Edit</a>
+            {{--<a href="{{ route('comics.delete')}}">Delete</a>--}}
+            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">Delete</button>
+            </form>
+            <a href="{{ url()->previous()}}">Back</a>
         </div>
     </main>
 @endsection
