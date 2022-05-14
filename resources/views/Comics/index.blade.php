@@ -18,7 +18,7 @@
     {{ $comics->links() }}
 
     <div class="text-center links mt-5">
-        <a href="{{ route('comics.create') }}" id="gray">Add a comic</a>
+        <a href="{{ route('comics.create') }}">Add a comic</a>
         <a href="{{ route('home') }}" id="red">Return to homepage</a>
     </div>
 </main>
