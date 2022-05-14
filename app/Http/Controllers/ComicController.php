@@ -47,7 +47,8 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $request->validate($this->validationData, [
-            'thumb.url' => 'insert a valid URL'
+            'thumb.url' => 'insert a valid URL',
+            'price.numeric' => 'Insert a price'
         ]);
         $formComic = $request->all();
 

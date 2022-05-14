@@ -8,19 +8,19 @@
             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
             <h1>{{ $comic->title }}</h1>
             <p>{{ $comic->description }}</p>
-            <h3>From the series: {{ $comic->series }}</h3>
+            <div>From the series: <strong>{{ $comic->series }}</strong></div>
             <div>Price: <strong>{{ $comic->price }}€</strong></div>
-            <div>Sale date: {{ $comic->sale_date }}</div>
-            <div>Type: {{ $comic->type }}</div>
+            <div>Sale date: <strong>{{ $comic->sale_date }}</strong></div>
+            <div>Type: <strong>{{ $comic->type }}</strong></div>
             <div class="links">
-                <a href="{{ route('comics.edit', $comic->id) }}">Edit</a>
-                <a href="{{ url()->previous()}}">Back</a>
+                <a href="{{ url()->previous()}}" id="gray">Back</a>
+                <a href="{{ route('comics.edit', $comic->id) }}" id="green">Edit</a>
                 <a href="{{ route('comics.index') }}">Return to comics list</a>
             </div>
             <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger mt-3">Delete</button>
+                <button class="btn btn-danger mt-3" onClick="return confirm('Are you sure to delete this comic?')">Delete</button>
             </form>
         </div>
     </main>

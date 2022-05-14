@@ -6,11 +6,28 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
+#red{
+    background-color: red;
+}
+
+#gray{
+    background-color: gray;
+}
+
+#green{
+    background-color: green;
+}
+
 .links{
     margin-top: 1rem;
-    
+
     a{
         padding: 0.7rem 1rem;
+        margin-right: 0.5rem;
         background-color: rgb(14, 109, 253);
         color: white;
         text-decoration: none;

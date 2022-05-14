@@ -51,9 +51,9 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             <div class="text-center links">
-                <a href="{{ url()->previous()}}">Back</a>
+                <a href="{{ url()->previous()}}" id="gray">Back</a>
                 <a href="{{ route('comics.index') }}">Return to comics list</a>
-                <a href="{{ route('home') }}">Return to home</a>
+                <a href="{{ route('home') }}" id="red">Return to home</a>
             </div>
         </div>
     </div>
