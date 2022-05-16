@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html{
+main{
     font-family: 'Comic Neue';
 }
 
@@ -99,4 +99,8 @@ li{
 
 .main_box{
     width: 100%;
+}
+
+.btn{
+    box-shadow: 5px 5px 5px black;
 }

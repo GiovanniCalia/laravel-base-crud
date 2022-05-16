@@ -2,8 +2,15 @@
 
 @section('title', 'Comics Home')
 
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Inter:wght@300;700&family=Montserrat:wght@700&family=Open+Sans&family=Raleway:wght@300&family=Roboto&family=Rubik+Mono+One&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
 @section('main')
-<div class="container">
+<main>
+  <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
             <h1 class="text-center">Add a comic</h1>
@@ -68,6 +75,7 @@
         </div>
     </div>
 </div>
+</main>
 @endsection
 
 
