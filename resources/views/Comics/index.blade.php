@@ -29,15 +29,5 @@
         <a href="{{ route('home') }}" id="red">Return to homepage</a>
     </div>
 
-
-    {{--<section id="confirmation-overlay">
-        <h1>Sei sicuro di voler eliminare?</h1>
-        <button id="btn-no">No</button>
-        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger btn-delete mt-3">Si</button>
-        </form>
-    </section>--}}
 </main>
 @endsection
