@@ -12179,6 +12179,10 @@ fieldset:disabled .btn {
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Comic Neue";
+}
+
 a {
   text-decoration: none;
 }
@@ -12206,6 +12210,7 @@ a {
   color: white;
   text-decoration: none;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
 }
 
 img {
@@ -12213,6 +12218,8 @@ img {
 }
 
 .background_comic {
+  width: 100%;
+  height: 100vh;
   background-image: url(https://wallpaperaccess.com/full/692818.jpg);
   background-size: cover;
 }
@@ -12252,6 +12259,7 @@ li {
   padding: 0.5rem;
   background-color: lightgray;
   border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .box {

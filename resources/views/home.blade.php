@@ -1,6 +1,6 @@
 <head>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Comics homepage</title>
+    <title>Comics Home</title>
 </head>
 <body>
     <div class="container-fluid background_comic">
